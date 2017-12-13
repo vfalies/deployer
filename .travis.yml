@@ -1,0 +1,17 @@
+sudo: required
+
+services: 
+  - docker
+
+addons:
+  apt:
+    packages:
+      - docker-ce
+
+before_install:
+  - docker --version
+
+  - docker build -t vfac/deployer .
+
+script:
+  - docker run --rm vfac/deployer --version

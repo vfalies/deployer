@@ -4,7 +4,8 @@ LABEL maintainer="Vincent Faliès <vincent@vfac.fr>"
 RUN apk update \
     && apk upgrade \
     && apk add \
-        curl
+        curl \
+        openssh
 
 RUN curl -LO https://deployer.org/deployer.phar \
     && mv deployer.phar /usr/local/bin/dep \

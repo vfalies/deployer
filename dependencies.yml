@@ -1,0 +1,8 @@
+collectors:
+
+- type: dockerfile
+  path: Dockerfile
+  actors:
+  # pull requests for all major, minor, and patch updates
+  - type: find-replace
+    versions: "L.Y.Y"

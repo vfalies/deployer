@@ -1,4 +1,4 @@
-FROM vfac/envdevphpbase:7.2
+FROM vfac/envdevphpbase:7.2-alpine
 LABEL maintainer="Vincent Faliès <vincent@vfac.fr>"
 
 RUN apk update \

@@ -13,7 +13,7 @@ COPY composer.json /app/composer.json
 USER vfac
 
 RUN cd /app/ \
-    && composer update --lock
+    && composer install
 
 WORKDIR /app
 

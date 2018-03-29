@@ -8,16 +8,14 @@ RUN apk update \
         openssh \
     && rm -rf /var/cache/apk/*
 
-COPY composer.json /app/composer.json
+COPY composer.json /deployer/composer.json
 
 USER root
-RUN chown -R vfac:vfac /app
+RUN chown -R vfac:vfac /deployer
 
 USER vfac
 
-RUN cd /app/ \
+RUN cd /deployer/ \
     && composer install
 
-WORKDIR /app
-
-ENTRYPOINT ["/app/vendor/bin/dep"]
+ENTRYPOINT ["/deployer/vendor/bin/dep"]

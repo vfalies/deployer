@@ -2,7 +2,7 @@
     "name": "Deployer",
     "description": "Deployer tool docker image",
     "require": {
-        "deployer/deployer": "~6.1"
+        "deployer/deployer": "v6.2.0"
     },
     "prefer-stable" : true
 }
